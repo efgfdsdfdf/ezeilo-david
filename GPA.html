@@ -26,7 +26,24 @@
       <div class="card">
         <h2>Welcome back, <span id="displayUser"></span> 👋</h2>
         <h3>GPA Calculator</h3>
-        <p>(Put your GPA calculator form here)</p>
+
+        <!-- GPA Calculator Form -->
+        <form id="gpaForm">
+          <input type="number" step="0.01" placeholder="Enter Grade Point (e.g. 4.0)" id="gradePoint" required>
+          <input type="number" placeholder="Enter Credit Hours" id="creditHours" required>
+          <button type="submit">Add Course</button>
+        </form>
+
+        <h4>Courses Added:</h4>
+        <ul id="courseList"></ul>
+
+        <button id="calcGPA">Calculate GPA</button>
+
+        <h3 id="gpaResult"></h3>
+
+        <hr>
+        <h3>GPA History</h3>
+        <ul id="gpaHistory"></ul>
       </div>
     </section>
   </main>
