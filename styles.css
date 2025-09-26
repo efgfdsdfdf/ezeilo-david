@@ -1,17 +1,21 @@
-/* General Body */
+/* General Body + page transition */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   opacity: 1;
-  transition: opacity 0.6s ease; /* Fade transition between pages */
+  transition: opacity 0.6s ease;
 }
 
-/* Fade-out effect when leaving page */
-body.fade-out {
-  opacity: 0;
+/* fade-out class used before navigating away */
+body.fade-out { opacity: 0; }
+
+/* Page-specific body backgrounds (use the body id) */
+body#loginBody {
+  background: linear-gradient(135deg, #00b894, #55efc4);
+  min-height: 100vh;
 }
 
-/* Header */
+/* header (used on other pages) */
 header {
   position: fixed;
   top: 0; left: 0;
@@ -27,123 +31,58 @@ header {
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-header .brand {
-  display: flex;
-  align-items: center;
-}
-header .brand h1 {
-  margin-left: 10px;
-  font-size: 20px;
-}
-header img.logo {
-  height: 40px;
-}
-
-nav a {
-  margin: 0 5px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-  color: white;
-  background: #333;
-  transition: background 0.3s;
-}
-nav a:hover {
-  background: #555;
-}
-nav a.active {
-  background: #00b894;
-}
-
-/* Login Page */
-#loginPage {
-  background: linear-gradient(135deg, #00b894, #55efc4);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* Login card */
 .login-card {
   background: white;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
   text-align: center;
+  width: 360px;
+  max-width: 90%;
+  margin: 50px auto;
   opacity: 0;
   transform: translateY(30px);
   animation: slideUpFade 0.8s ease forwards;
 }
-.login-card .logo {
-  height: 60px;
-  margin-bottom: 15px;
-}
+.login-card .logo { height: 60px; margin-bottom: 12px; }
 .login-card input, .login-card button {
   width: 90%;
   margin: 8px 0;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .login-card button {
   background: #00b894;
   color: white;
   border: none;
   cursor: pointer;
-  transition: background 0.3s;
 }
-.login-card button:hover {
-  background: #019875;
+.login-card button:hover { background: #019875; }
+
+/* Small animations */
+@keyframes slideUpFade {
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Page Sections */
-main {
-  padding: 90px 20px 20px;
-}
-.page {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-/* Cards */
+/* Card fade-in for other pages (used in their HTML files) */
 .card {
   background: white;
   padding: 20px;
   border-radius: 15px;
   width: 80%;
   max-width: 700px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.16);
   opacity: 0;
-  transform: scale(0.95);
-  animation: cardFadeIn 0.6s ease forwards;
-}
-
-/* Backgrounds with gradients */
-#gpaBody {
-  background: linear-gradient(135deg, #3498db, #2980b9);
-}
-#notesBody {
-  background: linear-gradient(135deg, #f1c40f, #f39c12);
-}
-#timetableBody {
-  background: linear-gradient(135deg, #8e6e53, #5d4037);
-  color: white;
-}
-#loginBody {
-  background: linear-gradient(135deg, #00b894, #55efc4);
-}
-
-/* Animations */
-@keyframes slideUpFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  transform: scale(0.97);
+  animation: cardFadeIn 0.5s ease forwards;
 }
 @keyframes cardFadeIn {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  to { opacity: 1; transform: scale(1); }
 }
+
+
