@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- load script with defer so DOM exists when code runs -->
-  <script src="js/script.js" defer></script>
+  <script defer src="js/script.js"></script>
 </head>
 <body id="loginBody">
-  <section id="loginPage">
+  <div id="loginPage">
     <div class="login-card">
       <img src="images/logo.png" alt="Logo" class="logo">
       <h2>Welcome</h2>
-      <input id="username" type="text" placeholder="Enter username">
-      <!-- IMPORTANT: type="button" prevents accidental form submit -->
-      <button id="loginBtn" type="button">Login</button>
+      <input type="text" id="username" placeholder="Enter your username">
+      <button onclick="login()">Login</button>
     </div>
-  </section>
+  </div>
 </body>
 </html>
