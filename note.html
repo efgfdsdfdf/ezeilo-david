@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notes</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="js/script.js"></script>
 </head>
 <body id="notesBody">
   <header>
@@ -14,23 +14,20 @@
       <h1>Student Portal</h1>
     </div>
     <nav>
-      <a href="gpa.html"><i data-lucide="book-open"></i> GPA</a>
-      <a href="notes.html" class="active"><i data-lucide="pen-square"></i> Notes</a>
-      <a href="timetable.html"><i data-lucide="calendar-days"></i> Timetable</a>
-      <a href="index.html"><i data-lucide="log-out"></i> Logout</a>
+      <a href="gpa.html">GPA</a>
+      <a href="notes.html" class="active">Notes</a>
+      <a href="timetable.html">Timetable</a>
+      <a href="#" onclick="logout()">Logout</a>
     </nav>
   </header>
 
   <main>
-    <section id="notesPage" class="page">
+    <section class="page">
       <div class="card">
-        <h2><i data-lucide="pen-square"></i> Notes</h2>
-        <div id="notesContent"></div>
+        <h2>Your Notes</h2>
+        <textarea rows="8" placeholder="Write your notes here..."></textarea>
       </div>
     </section>
   </main>
-
-  <script src="js/script.js"></script>
-  <script>lucide.createIcons();</script>
 </body>
 </html>
