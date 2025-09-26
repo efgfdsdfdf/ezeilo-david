@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GPA Calculator</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="js/script.js"></script>
 </head>
 <body id="gpaBody">
   <header>
@@ -14,24 +14,22 @@
       <h1>Student Portal</h1>
     </div>
     <nav>
-      <a href="gpa.html" class="active"><i data-lucide="book-open"></i> GPA</a>
-      <a href="notes.html"><i data-lucide="pen-square"></i> Notes</a>
-      <a href="timetable.html"><i data-lucide="calendar-days"></i> Timetable</a>
-      <a href="index.html"><i data-lucide="log-out"></i> Logout</a>
+      <a href="gpa.html" class="active">GPA</a>
+      <a href="notes.html">Notes</a>
+      <a href="timetable.html">Timetable</a>
+      <a href="#" onclick="logout()">Logout</a>
     </nav>
   </header>
 
   <main>
-    <section id="gpaPage" class="page">
+    <section class="page">
       <div class="card">
-        <h2><i data-lucide="book-open"></i> GPA Calculator</h2>
-        <div id="gpaContent"></div>
+        <h2>Welcome back, <span id="displayUser"></span> 👋</h2>
+        <h3>GPA Calculator</h3>
+        <p>(Put your GPA calculator form here)</p>
       </div>
     </section>
   </main>
-
-  <script src="js/script.js"></script>
-  <script>lucide.createIcons();</script>
 </body>
 </html>
 
